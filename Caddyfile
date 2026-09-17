@@ -1,0 +1,5 @@
+:80 {
+    reverse_proxy host.docker.internal:5101 host.docker.internal:5102 {
+        lb_policy round_robin
+    }
+}

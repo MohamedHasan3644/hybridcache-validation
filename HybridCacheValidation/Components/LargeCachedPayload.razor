@@ -1,0 +1,14 @@
+@inject ILogger<LargeCachedPayload> Logger
+
+<p><strong>Oversized payload Guid:</strong> @Value</p>
+<pre aria-label="Payload sample">@Payload</pre>
+
+@code {
+    private string Value { get; } = Guid.NewGuid().ToString();
+    private string Payload { get; } = new('X', 4 * 1024);
+
+    protected override void OnInitialized()
+    {
+        Logger.LogInformation("LargeCachedPayload initialized. Guid: {Guid}; payload chars: {Length}", Value, Payload.Length);
+    }
+}

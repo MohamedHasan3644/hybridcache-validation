@@ -1,0 +1,33 @@
+@page "/expiration"
+
+<PageTitle>CacheView expiration</PageTitle>
+
+<h1>Expiration checks</h1>
+<p>Query key: <strong>@Entry</strong>. Change <code>entry</code> in the URL to force a new cache key.</p>
+
+<section>
+    <h2>Relative absolute expiration</h2>
+    <p>Configured with <code>ExpiresAfter=20 seconds</code>.</p>
+    <CacheView CacheKey="hybridcache-validation-relative-expiration"
+               VaryBy="@Entry"
+               ExpiresAfter="TimeSpan.FromSeconds(20)">
+        <CachedGuid />
+    </CacheView>
+</section>
+
+<section>
+    <h2>Absolute clock expiration</h2>
+    <p>Configured with <code>ExpiresOn=now + 45 seconds</code> when this entry is created.</p>
+    <CacheView CacheKey="hybridcache-validation-clock-expiration"
+               VaryBy="@Entry"
+               ExpiresOn="@ClockExpiry">
+        <CachedGuid />
+    </CacheView>
+</section>
+
+@code {
+    [SupplyParameterFromQuery(Name = "entry")]
+    private string? Entry { get; set; }
+
+    private DateTimeOffset ClockExpiry => DateTimeOffset.UtcNow.AddSeconds(45);
+}

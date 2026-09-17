@@ -1,0 +1,14 @@
+@inject ILogger<CachedGuid> Logger
+
+<p><strong>Guid:</strong> @Value</p>
+<p><strong>Initialized (UTC):</strong> @InitializedAtUtc.ToString("O")</p>
+
+@code {
+    private string Value { get; } = Guid.NewGuid().ToString();
+    private DateTimeOffset InitializedAtUtc { get; } = DateTimeOffset.UtcNow;
+
+    protected override void OnInitialized()
+    {
+        Logger.LogInformation("CachedGuid initialized. Guid: {Guid}; UTC: {InitializedAtUtc}", Value, InitializedAtUtc);
+    }
+}

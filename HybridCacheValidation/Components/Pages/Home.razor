@@ -1,0 +1,18 @@
+﻿@page "/"
+@inject IConfiguration Configuration
+
+<PageTitle>HybridCache CacheView validation</PageTitle>
+
+<h1>HybridCache CacheView validation</h1>
+<p><strong>Responding instance:</strong> @Configuration["Validation:InstanceName"]</p>
+<p>Use <a href="/expiration?entry=one">expiration</a>, <a href="/payload?entry=one">payload</a>, or <a href="/sliding">sliding expiration</a>.</p>
+
+<section>
+	<h2>Shared entry</h2>
+	<CacheView CacheKey="hybridcache-validation-shared-guid"
+			   VaryByQuery="entry"
+			   ExpiresAfter="TimeSpan.FromMinutes(10)">
+		<p><strong>Cached variant:</strong> @Configuration["Validation:VariantText"]</p>
+		<CachedGuid />
+	</CacheView>
+</section>

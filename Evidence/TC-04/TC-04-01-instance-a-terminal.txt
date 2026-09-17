@@ -1,0 +1,179 @@
+D:\HybridCacheValidation\HybridCacheValidation\HybridCacheValidation.csproj n
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5101
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: D:\HybridCacheValidation\HybridCacheValidation
+dbug: Microsoft.AspNetCore.Components.Endpoints.RazorComponentEndpointInvoker[1]
+      Begin render root component 'App' with page 'Home'.
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[2]
+      Initializing root component 0 (HybridCacheValidation.Components.App)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 0 of type HybridCacheValidation.Components.App
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 1 (Microsoft.AspNetCore.Components.Endpoints.BasePath) as child of 0 (HybridCacheValidation.Components.App)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 2 (Microsoft.AspNetCore.Components.ResourcePreloader) as child of 0 (HybridCacheValidation.Components.App)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 3 (Microsoft.AspNetCore.Components.ImportMap) as child of 0 (HybridCacheValidation.Components.App)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 4 (Microsoft.AspNetCore.Components.Web.HeadOutlet) as child of 0 (HybridCacheValidation.Components.App)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 5 (HybridCacheValidation.Components.Routes) as child of 0 (HybridCacheValidation.Components.App)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 6 (HybridCacheValidation.Components.Layout.ReconnectModal) as child of 0 (HybridCacheValidation.Components.App)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 1 of type Microsoft.AspNetCore.Components.Endpoints.BasePath
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 2 of type Microsoft.AspNetCore.Components.ResourcePreloader
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 3 of type Microsoft.AspNetCore.Components.ImportMap
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 4 of type Microsoft.AspNetCore.Components.Web.HeadOutlet
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 7 (Microsoft.AspNetCore.Components.Sections.SectionOutlet) as child of 4 (Microsoft.AspNetCore.Components.Web.HeadOutlet)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 8 (Microsoft.AspNetCore.Components.Sections.SectionOutlet) as child of 4 (Microsoft.AspNetCore.Components.Web.HeadOutlet)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 5 of type HybridCacheValidation.Components.Routes
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 9 (Microsoft.AspNetCore.Components.Routing.Router) as child of 5 (HybridCacheValidation.Components.Routes)
+dbug: Microsoft.AspNetCore.Components.Routing.Router[2]
+      Navigating to component HybridCacheValidation.Components.Pages.Home in response to path '/' with base URI 'http://localhost:5101/'
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 6 of type HybridCacheValidation.Components.Layout.ReconnectModal
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 7 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 10 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 7 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 7 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 8 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 11 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 8 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 8 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 9 of type Microsoft.AspNetCore.Components.Routing.Router
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 12 (Microsoft.AspNetCore.Components.RouteView) as child of 9 (Microsoft.AspNetCore.Components.Routing.Router)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 13 (Microsoft.AspNetCore.Components.Routing.FocusOnNavigate) as child of 9 (Microsoft.AspNetCore.Components.Routing.Router)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 10 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 10 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 11 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 11 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 12 of type Microsoft.AspNetCore.Components.RouteView
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 14 (Microsoft.AspNetCore.Components.LayoutView) as child of 12 (Microsoft.AspNetCore.Components.RouteView)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 13 of type Microsoft.AspNetCore.Components.Routing.FocusOnNavigate
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 14 of type Microsoft.AspNetCore.Components.LayoutView
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 15 (HybridCacheValidation.Components.Layout.MainLayout) as child of 14 (Microsoft.AspNetCore.Components.LayoutView)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 15 of type HybridCacheValidation.Components.Layout.MainLayout
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 16 (HybridCacheValidation.Components.Layout.NavMenu) as child of 15 (HybridCacheValidation.Components.Layout.MainLayout)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 17 (HybridCacheValidation.Components.Pages.Home) as child of 15 (HybridCacheValidation.Components.Layout.MainLayout)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 16 of type HybridCacheValidation.Components.Layout.NavMenu
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 18 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 16 (HybridCacheValidation.Components.Layout.NavMenu)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 19 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 16 (HybridCacheValidation.Components.Layout.NavMenu)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 20 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 16 (HybridCacheValidation.Components.Layout.NavMenu)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 17 of type HybridCacheValidation.Components.Pages.Home
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 21 (Microsoft.AspNetCore.Components.Web.PageTitle) as child of 17 (HybridCacheValidation.Components.Pages.Home)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 22 (Microsoft.AspNetCore.Components.CacheView) as child of 17 (HybridCacheValidation.Components.Pages.Home)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 18 of type Microsoft.AspNetCore.Components.Routing.NavLink
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 19 of type Microsoft.AspNetCore.Components.Routing.NavLink
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 20 of type Microsoft.AspNetCore.Components.Routing.NavLink
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 21 of type Microsoft.AspNetCore.Components.Web.PageTitle
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 23 (Microsoft.AspNetCore.Components.Sections.SectionContent) as child of 21 (Microsoft.AspNetCore.Components.Web.PageTitle)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 7 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 24 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 7 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 10 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 24 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 22 of type Microsoft.AspNetCore.Components.CacheView
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[1]
+      Initializing component 25 (HybridCacheValidation.Components.CachedGuid) as child of 22 (Microsoft.AspNetCore.Components.CacheView)
+info: HybridCacheValidation.Components.CachedGuid[0]
+      CachedGuid initialized. Guid: 07eb1d3b-f252-4153-97af-8748f719a169; UTC: 09/17/2026 08:50:52 +00:00
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[3]
+      Rendering component 25 of type HybridCacheValidation.Components.CachedGuid
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 0 of type HybridCacheValidation.Components.App
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 1 of type Microsoft.AspNetCore.Components.Endpoints.BasePath
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 2 of type Microsoft.AspNetCore.Components.ResourcePreloader
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 3 of type Microsoft.AspNetCore.Components.ImportMap
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 4 of type Microsoft.AspNetCore.Components.Web.HeadOutlet
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 5 of type HybridCacheValidation.Components.Routes
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 6 of type HybridCacheValidation.Components.Layout.ReconnectModal
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 7 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 8 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 9 of type Microsoft.AspNetCore.Components.Routing.Router
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 25 of type HybridCacheValidation.Components.CachedGuid
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 11 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 12 of type Microsoft.AspNetCore.Components.RouteView
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 13 of type Microsoft.AspNetCore.Components.Routing.FocusOnNavigate
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 14 of type Microsoft.AspNetCore.Components.LayoutView
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 15 of type HybridCacheValidation.Components.Layout.MainLayout
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 16 of type HybridCacheValidation.Components.Layout.NavMenu
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 17 of type HybridCacheValidation.Components.Pages.Home
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 18 of type Microsoft.AspNetCore.Components.Routing.NavLink
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 19 of type Microsoft.AspNetCore.Components.Routing.NavLink
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 20 of type Microsoft.AspNetCore.Components.Routing.NavLink
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 21 of type Microsoft.AspNetCore.Components.Web.PageTitle
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 22 of type Microsoft.AspNetCore.Components.CacheView
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 23 of type Microsoft.AspNetCore.Components.Sections.SectionContent
+dbug: Microsoft.AspNetCore.Components.RenderTree.Renderer[4]
+      Disposing component 24 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer

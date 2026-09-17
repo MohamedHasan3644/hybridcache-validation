@@ -1,0 +1,29 @@
+services:
+  redis:
+    image: redis:7-alpine
+  app-a:
+    build: .
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__RedisConnectionString: redis:6379,abortConnect=false
+      Validation__InstanceName: Instance-A
+    depends_on:
+      - redis
+  app-b:
+    build: .
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__RedisConnectionString: redis:6379,abortConnect=false
+      Validation__InstanceName: Instance-B
+      Validation__VariantText: CHANGED
+    depends_on:
+      - redis
+  proxy:
+    image: caddy:2-alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./Caddyfile.container:/etc/caddy/Caddyfile:ro
+    depends_on:
+      - app-a
+      - app-b

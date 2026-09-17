@@ -1,0 +1,10 @@
+@page "/sliding"
+
+<PageTitle>Unsupported sliding expiration</PageTitle>
+
+<h1>Unsupported sliding expiration</h1>
+<p>Loading this page is expected to throw because this app selects HybridCache automatically.</p>
+<CacheView CacheKey="hybridcache-validation-sliding"
+           ExpiresSliding="TimeSpan.FromSeconds(10)">
+    <CachedGuid />
+</CacheView>

@@ -1,0 +1,11 @@
+@page "/payload"
+
+<PageTitle>CacheView payload limit</PageTitle>
+
+<h1>Payload limit check</h1>
+<p>The configured HybridCache maximum payload is 1 KB. This section renders 4 KB.</p>
+<CacheView CacheKey="hybridcache-validation-oversized-payload"
+           VaryByQuery="entry"
+           ExpiresAfter="TimeSpan.FromMinutes(5)">
+    <LargeCachedPayload />
+</CacheView>
