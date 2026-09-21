@@ -1,0 +1,10 @@
+@page "/absolute-expiration"
+
+<PageTitle>Absolute expiration with HybridCache</PageTitle>
+
+<h1>Absolute expiration with HybridCache</h1>
+<p>This uses the same cached child and ten-second lifetime as <code>/sliding</code>, with <code>ExpiresAfter</code> in place of <code>ExpiresSliding</code>.</p>
+<CacheView CacheKey="hybridcache-validation-sliding"
+           ExpiresAfter="TimeSpan.FromSeconds(10)">
+    <CachedGuid />
+</CacheView>

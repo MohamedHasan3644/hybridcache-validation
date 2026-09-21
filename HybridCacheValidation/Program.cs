@@ -2,6 +2,7 @@ using HybridCacheValidation.Client.Pages;
 using HybridCacheValidation.Components;
 
 var builder = WebApplication.CreateBuilder(args);
+var useHybridCache = builder.Configuration.GetValue("Validation:UseHybridCache", true);
 
 // Add services to the container.
 builder.Services.AddRazorComponents(options =>
@@ -9,15 +10,18 @@ builder.Services.AddRazorComponents(options =>
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
-builder.Services.AddStackExchangeRedisCache(options =>
+if (useHybridCache)
 {
-    options.Configuration = builder.Configuration.GetConnectionString("RedisConnectionString");
-    options.InstanceName = "cacheview-validation:";
-});
-builder.Services.AddHybridCache(options =>
-{
-    options.MaximumPayloadBytes = 1024;
-});
+    builder.Services.AddStackExchangeRedisCache(options =>
+    {
+        options.Configuration = builder.Configuration.GetConnectionString("RedisConnectionString");
+        options.InstanceName = "cacheview-validation:";
+    });
+    builder.Services.AddHybridCache(options =>
+    {
+        options.MaximumPayloadBytes = 1024;
+    });
+}
 
 var app = builder.Build();
 

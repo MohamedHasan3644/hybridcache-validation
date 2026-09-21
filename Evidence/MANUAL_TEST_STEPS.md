@@ -1,6 +1,6 @@
 # Manual Test Execution Guide
 
-This guide provides literal manual steps for the `CacheView` backed by HybridCache validation sample. It covers `TC-01` through `TC-10` and must be executed manually. Record the observed outcome; do not mark a case as passed until every listed verification succeeds.
+This guide provides literal manual steps for the `CacheView` backed by HybridCache validation sample. It covers `TC-01` through `TC-12` and must be executed manually. Record the observed outcome; do not mark a case as passed until every listed verification succeeds.
 
 ## Read This First
 
@@ -171,6 +171,19 @@ For a terminal capture, include the request line, relevant cache/provider log li
 
 **Pass checklist:** The failure is `NotSupportedException` and its message names sliding expiration and points to absolute options such as `ExpiresAfter` or `ExpiresOn`.
 
+## TC-12 - In-memory sliding-expiration control
+
+**Purpose:** Demonstrate that the same `CacheView` succeeds with sliding expiration when no `HybridCache` service is registered.
+
+1. Start the app without HybridCache: `dotnet run --project .\HybridCacheValidation --urls http://localhost:5103 -- --Validation:UseHybridCache=false --Validation:InstanceName=InMemory-Control`.
+2. Open `http://localhost:5103/sliding` and copy the Guid.
+3. Reload within 10 seconds and confirm the Guid is unchanged.
+4. Wait more than 10 seconds without requesting the page, then reload and confirm the Guid changes.
+
+**Evidence checkpoint - capture now:** Save the page observations and terminal output as `TC-12-01-in-memory-sliding-control.txt`.
+
+**Pass checklist:** No exception occurs. The same Guid is reused inside the sliding window and is replaced after an idle period longer than the ten-second window.
+
 ## TC-05 - Relative absolute expiration
 
 **Purpose:** Verify `ExpiresAfter="TimeSpan.FromSeconds(20)"`.
@@ -323,14 +336,15 @@ For a terminal capture, include the request line, relevant cache/provider log li
 
 | Testcase | Result | Start UTC | Evidence files captured | Notes / issue classification |
 |---|---|---|---|---|
-| TC-01 | Not run | | | |
-| TC-02 | Not run | | | |
-| TC-03 | Not run | | | |
-| TC-04 | Not run | | | |
-| TC-05 | Not run | | | |
-| TC-06 | Not run | | | |
-| TC-07 | Not run | | | |
-| TC-08 | Not run | | | |
-| TC-09 | Observation recorded | | | |
-| TC-10 | Not run | | | |
+| TC-01 | Pass | 2026-09-21 | TC-01 existing A/B evidence; TC-01 proxy screenshots; TC-01-01-proxy-first-response-terminal.txt; TC-01-02-proxy-second-instance-terminal.txt | Direct and proxy-routed requests reused Guid `c1e4b6d0-4b95-411b-9f09-79037a6d0972`. The proxy served Instance-B first, then Instance-A; only Instance-B initialized the child. |
+| TC-02 | Pass | 2026-09-17 | TC-02-01-instance-a-terminal.txt; TC-02-02-instance-b-terminal.txt; TC-02-03-instance-a-after-restart-terminal.txt | Restarted Instance-A reused the unexpired shared entry without a new child initialization. |
+| TC-03 | Pass | 2026-09-17 | TC-03-01-instance-a-terminal-before-restart.txt; TC-03-02-instance-b-terminal-before-restart.txt; TC-03-03-instance-a-terminal-after-restart.txt; TC-03-04-instance-b-terminal-after-restart.txt | Sequential restarts reused the entry; one cold child initialization was recorded. |
+| TC-04 | Pass | 2026-09-21 | TC-04-05-server-exception.txt; TC-04-06-hybridcache-sliding-page-terminal.txt; refreshed browser exception screenshots | With HybridCache registered, `/sliding` threw `NotSupportedException` naming `ExpiresSliding` and directing use of `ExpiresAfter` or `ExpiresOn`. |
+| TC-05 | Pass | 2026-09-21 | TC-05-04-terminal.txt; TC-05A-01-absolute-counterpart-initial.png; TC-05A-02-absolute-counterpart-before-expiry.png; TC-05A-03-absolute-counterpart-after-expiry.png; TC-05A-04-absolute-counterpart-terminal.txt | `ExpiresAfter` reused the value before expiry and rendered a replacement after expiry. The TC-05A counterpart used the same key, child, and 10-second lifetime as `/sliding`, and likewise reused before expiry and replaced after expiry. |
+| TC-06 | Pass | 2026-09-17 | TC-06-04-absolute-clock-expiration-terminal.txt | `ExpiresOn` reused the value before the calculated deadline and rendered a replacement after it. |
+| TC-07 | Pass | 2026-09-17 | TC-07-01-warm-a-page-terminal.txt; TC-07-02-outage-local-terminal.txt; TC-07-03-outage-backend-terminal.txt; TC-07-05-recovery-b-page-terminal.txt | Warm local output remained usable during Redis outage; backend failures were logged for a new key; sharing resumed after recovery. |
+| TC-08 | Pass | 2026-09-17 | TC-08-01-first-payload-terminal.txt; TC-08-03-new-key-terminal.txt | The oversized response reached the visitor while HybridCache logged the maximum-payload rejection. |
+| TC-09 | Observation recorded | 2026-09-17 | TC-09-03-original-a-terminal.txt; TC-09-04-changed-b-terminal.txt | Mixed-version output was recorded without pre-classifying the observed behavior as a defect. |
+| TC-10 | Pass | 2026-09-17 | TC-10-01-cold-terminal.txt; TC-10-04-local-terminal.txt; TC-10-07-secondary-terminal.txt | Cold, local-cache-hit, and secondary-cache-hit timings were recorded as observations; no elapsed-time ordering was asserted. |
 | TC-11 | Pass | 2026-09-17 | TC-11-01-browser-console-clean.png | Normal shared-cache, expiration, and payload requests produced only Chrome `Navigated to` messages; no application Console errors or warnings. |
+| TC-12 | Pass | 2026-09-21 | TC-12-01-in-memory-first-response.png; TC-12-02-in-memory-within-window.png; TC-12-03-in-memory-after-idle-expiry.png; TC-12-04-in-memory-sliding-terminal.txt | Started with `Validation:UseHybridCache=false` at `http://localhost:5103/sliding`. The first Guid (`01288093-03a6-4af0-9365-f2e4cffc787e`) was reused within 10 seconds. After more than 10 seconds idle, a new Guid (`a20e3675-f6dd-49ff-899b-603fe402ea3e`) rendered. No exception occurred; the terminal recorded exactly two `CachedGuid initialized` events across the three requests. |
